@@ -67,13 +67,6 @@ namespace MergeSort {
             return returned;
         }
 
-        template<typename T> void printVec(const std::vector<T>& vec) {
-            for (const T i : vec) {
-                std::cout << i << " ";
-            }
-            std::cout << "\n";
-        }
-
         template<typename T> std::vector<T> sortMerge(std::vector<T>& arr, bool(*comparisonFunc)(T, T)) {
             if (arr.size() == 1) {
                 return arr;
@@ -94,6 +87,13 @@ namespace MergeSort {
             }
         }
 
+    }
+
+    template<typename T> void printVec(const std::vector<T>& vec) {
+        for (const T i : vec) {
+            std::cout << i << " ";
+        }
+        std::cout << "\n";
     }
 
     template<typename T> std::vector<T> mergeSort(std::vector<T>& arr, bool(*comparisonFunc)(T, T)) {
